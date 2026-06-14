@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #4f46e5;
+  --color-primary-hover: #4338ca;
+  --color-highlight: #22d3ee;
+  --color-bg-base: #020617;
+  --color-bg-card: rgba(15, 23, 42, 0.6);
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    @apply w-full max-w-full overflow-x-hidden;
+  }
+
+  body {
+    @apply bg-slate-950 text-slate-50 transition-colors duration-300;
+  }
+}
+
+@utility glass-card {
+  @apply bg-slate-900/40 backdrop-blur-xl border border-slate-700/50 shadow-2xl;
+}
+
+@utility glass-panel {
+  @apply bg-slate-800/30 backdrop-blur-md border border-slate-700/50 shadow-lg;
+}
+
+@utility input-glow {
+  @apply focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 focus:outline-none transition-all duration-300;
+}

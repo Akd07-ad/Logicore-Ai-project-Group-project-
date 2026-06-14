@@ -1,0 +1,15 @@
+{
+  "name": "edupredict-ai-workspace",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "postinstall": "npm run setup",
+    "setup": "node scripts/setup-all.js",
+    "dev": "node scripts/dev-all.js",
+    "migrate": "node scripts/migrate.js",
+    "seed": "node scripts/seed.js",
+    "train:ml": "node scripts/train-ml.js",
+    "bootstrap": "npm run train:ml && npm run migrate && npm run seed",
+    "frontend:build": "npm --prefix frontend run build"
+  }
+}
